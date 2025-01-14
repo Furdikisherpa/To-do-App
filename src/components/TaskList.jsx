@@ -24,6 +24,7 @@ TaskList.propTypes = {
     PropTypes.shape({
         id: PropTypes.number.isRequired,
         description: PropTypes.string.isRequired,
+        priority: PropTypes.string.isRequired,
         completed: PropTypes.bool.isRequired
     })
     ).isRequired,

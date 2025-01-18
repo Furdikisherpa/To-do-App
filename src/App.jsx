@@ -2,6 +2,7 @@ import { useState } from 'react';
 import TaskInput from './components/TaskInput';
 import TaskList from './components/TaskList';
 import Filter from './components/Filter';
+import SideBar from './components/SideBar';
 
 function App() {
   const [tasks, setTasks] = useState([]);
@@ -49,8 +50,8 @@ function App() {
   });
 
   return (
-    <div>
-      <h1 className='flex justify-center items-center mt-10 text-3xl font-bold mb-5'>To-Do List</h1>
+    <div className=''>
+      <h1 className=' flex justify-center items-center mt-10 text-3xl font-bold mb-5'>To-Do List</h1>
 
       <div className='flex justify-center items-center mb-5'>
         <button onClick={() => setIsFormVisible(!isFromVisible)}
@@ -69,6 +70,9 @@ function App() {
         deleteTask={deleteTask}
         toggleComplete={toggleComplete}
       />
+
+
+      <SideBar />
     </div>
   );
 }
